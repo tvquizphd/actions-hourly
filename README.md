@@ -2,12 +2,11 @@
 
 Schedules cron each 45, 48, or 50 minutes when you need it.
 
-- Need to run GitHub actions "at least" once per hour?
-- Can't waste [runtime limits][limits] while you're asleep?
-- Can't wate time running at usual peak times?
-- Can't calculate the [schedule][cron] by hand?
+- [Run GitHub actions][cron] at least once per hour.
+- Don't use [rate limits][limits] when not needed.
+- Don't run during busy peak hours.
 
-This package is a niche solution to all these issues.
+This package is a niche solution to these issues.
 
 ```
 npx actions-hourly <PERIOD> <WAKE> <SLEEP>
