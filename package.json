@@ -1,9 +1,12 @@
 {
   "name": "actions-hourly",
   "author": "tvquizphd",
-  "version": "1.0.1",
-  "bin": "./cli.js",
+  "version": "1.1.0",
+  "bin": "cli.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tvquizphd/actions-hourly.git"
