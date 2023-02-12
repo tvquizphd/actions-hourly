@@ -13,9 +13,9 @@ This package is a niche solution to all these issues.
 npx actions-hourly <PERIOD> <WAKE> <SLEEP>
 ```
 
-The `PERIOD` is 45, 48, or 50.
-The `WAKE` is the start time (with `AM` or `PM`)
-The `SLEEP` is the end time (with `AM` or `PM`)
+- The `PERIOD` is 45, 48, or 50.
+- The `WAKE` is the start time (with `AM` or `PM`)
+- The `SLEEP` is the end time (with `AM` or `PM`)
 
 This uses the `TZ` variable, which defaults to local time.
 
@@ -29,7 +29,7 @@ npx actions-hourly 45 9AM 5PM
 
 Example output with random offset 3 minutes.
 
-```
+```json
 {
     "crons_yaml": "- cron: 3 14-20/3 * * *\n- cron: 48 14-20/3 * * *\n- cron: 33 15-21/3 * * *\n- cron: 18 16-19/3 * * *",
     "crons_list": [
@@ -38,7 +38,9 @@ Example output with random offset 3 minutes.
         "33 15-21/3 * * *",
         "18 16-19/3 * * *"
     ],
-    "header": "Every 45 minutes, after 3 minute offset...\n14:03 ≤ (UTC) ≤ 21:33. 9AM < (America/New_York) < 5PM."
+    "header": "Every 45 minutes, after 3 minute offset...",
+    "local": "9AM < (America/New_York) < 5PM",
+    "utc": "14:03 ≤ (UTC) ≤ 21:33"
 }
 ```
 
@@ -62,11 +64,13 @@ Example output with random offset 7 minutes.
         "57 5-10/5 * * *",
         "47 6 * * *"
     ],
-    "header": "Every 50 minutes, after 7 minute offset...\n03:27 ≤ (UTC) ≤ 10:57. 9AM < (Asia/Calcutta) < 5PM."
+    "header": "Every 50 minutes, after 7 minute offset...",
+    "local": "9AM < (Asia/Calcutta) < 5PM",
+    "utc": "03:27 ≤ (UTC) ≤ 10:57"
 }
 ```
 
 ---
 
-limits: https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions
-cron: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+[limits]: https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions
+[cron]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule

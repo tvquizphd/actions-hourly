@@ -102,15 +102,13 @@ const rep_crons = (wake, sleep, tz, dt) => {
     }, []);
     const { utc, crons } = to_utc_precise(patterns);
     const [w, s] = [wake, sleep].map(x => x.replace(':',''));
-    const offset = `after ${min_off} minute offset`;
-    const header = [
-      `Every ${dt} minutes, ${offset}...`,
-      `${utc}. ${w} < (${tz}) < ${s}.`
-    ].join('\n');
+    const offset = `After ${min_off} minute offset`;
+    const header = `Every ${dt} minutes, ${offset}...`;
+    const local = `${w} < (${tz}) < ${s}`
     const crons_list = crons.map(t => t.slice(8))
     const crons_yaml = crons.join('\n');
     const out = JSON.stringify({
-      crons_yaml, crons_list, header
+      crons_yaml, crons_list, header, local, utc
     }, null, 4);
     output.push(out);
   }
