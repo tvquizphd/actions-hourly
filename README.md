@@ -4,7 +4,7 @@ Schedules cron each 45, 48, or 50 minutes when you need it.
 
 - Need to run GitHub actions "at least" once per hour?
 - Can't waste [runtime limits][limits] while you're asleep?
-- Can't wate time running at busy "exact hourly" times?
+- Can't wate time running at usual peak times?
 - Can't calculate the [schedule][cron] by hand?
 
 This package is a niche solution to all these issues.
@@ -46,7 +46,7 @@ Example output with random offset 3 minutes.
 
 ---
 
-Once each 45 min from 9AM - 5PM in India Standard Time
+Once each 50 min from 9AM - 5PM in India Standard Time
 ```
 export TZ="Asia/Calcutta"
 npx actions-hourly 50 9AM 5PM
