@@ -38,7 +38,7 @@ Example output with random offset 3 minutes.
         "33 15-21/3 * * *",
         "18 16-19/3 * * *"
     ],
-    "header": "Every 45 minutes, after 3 minute offset...",
+    "header": "Every 45 minutes, after 3 minute offset",
     "local": "9AM < (America/New_York) < 5PM",
     "utc": "14:03 ≤ (UTC) ≤ 21:33"
 }
@@ -64,7 +64,7 @@ Example output with random offset 7 minutes.
         "57 5-10/5 * * *",
         "47 6 * * *"
     ],
-    "header": "Every 50 minutes, after 7 minute offset...",
+    "header": "Every 50 minutes, after 7 minute offset",
     "local": "9AM < (Asia/Calcutta) < 5PM",
     "utc": "03:27 ≤ (UTC) ≤ 10:57"
 }
