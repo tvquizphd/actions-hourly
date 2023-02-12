@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const toInt = x => parseInt(x, 10);
 
 const to_range = (m, h1, h2, day) => {
