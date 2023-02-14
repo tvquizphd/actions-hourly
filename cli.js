@@ -49,7 +49,7 @@ const cron = (start, end, f, min) => {
       delete o.full;
       break;
     default:
-      return [_cron(m, f, h, end_max)];
+      return [_cron(m, f, h, end_max, 1)];
   }
   return Object.values(o); 
 }
